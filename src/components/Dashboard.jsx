@@ -7,7 +7,6 @@ import axios from "axios";
 
 const spotifyApi = new SpotifyWebApi({
     clientId: "790dab6b94fc4c9eaa8a23640bf135b4",
-
 })
 
 const Dashboard = ({ code }) => {
@@ -24,7 +23,7 @@ const Dashboard = ({ code }) => {
     }
     useEffect(() => {
         if (!playingTrack) return;
-        axios.get("http:localhost:5174/lyrics", {
+        axios.get("http://localhost:5173/lyrics", {
             params: {
                 track: playingTrack.title,
                 artist: playingTrack.artist
